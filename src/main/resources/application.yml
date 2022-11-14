@@ -1,0 +1,22 @@
+script:
+  csv-path: "\\src\\main\\resources\\static\\"
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+  datasource:
+    hikari:
+      connection-timeout: '30000'
+      maximum-pool-size: '50'
+    password: saurabh4488
+    username: system
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+  jpa:
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: '8189'
